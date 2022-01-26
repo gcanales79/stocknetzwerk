@@ -1,0 +1,24 @@
+@import "../../../scss/index.scss";
+
+.footer{
+    background-color: $background-dark-web;
+    border-top:3px solid $primary-color;
+
+    .ant-col{
+        padding:10px;
+    }
+
+
+    &__copyright{
+        margin-top:30px;
+
+        .ant-col{
+            color:$primary-color-dark;
+
+            &:last-of-type{
+                text-align:right;
+            }
+        }
+    }
+
+}
