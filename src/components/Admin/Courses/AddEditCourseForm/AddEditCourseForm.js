@@ -12,7 +12,7 @@ export default function AddEditCourseForm(props) {
 
     useEffect(() => {
         //Si course exite lo ejecuta
-      course && setCourseData(course)
+      course ? setCourseData(course):setCourseData({})
     }, [course]);
     
 
