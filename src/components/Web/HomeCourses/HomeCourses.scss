@@ -1,92 +1,93 @@
 @import "../../../scss/index.scss";
 
-.home-courses{
-    margin-top:50px;
-    margin-bottom:50px;
+.home-courses {
+  margin-top: 50px;
+  margin-bottom: 50px;
 
-    &__title{
-        text-align:center;
+  &__title {
+    text-align: center;
 
-        h2{
-            color:$font-light;
-            font-weight:bold;
-            font-size:32px;
-            text-transform:uppercase;
-        }
+    h2 {
+      color: $font-light;
+      font-weight: bold;
+      font-size: 32px;
+      text-transform: uppercase;
+    }
+  }
+
+  .ant-col {
+    padding: 15px !important;
+  }
+
+  .row-courses {
+    .ant-col {
+      padding: 15px !important;
+    }
+  }
+
+  &__card {
+    border: 0px;
+    height: 450px;
+    background-color: $background-dark-light-web;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+
+    .ant-card-body {
+      text-align: center;
+      min-height: 130px;
+
+      .ant-card-meta-title,
+      .ant-card-meta-description {
+        color: $font-light;
+        white-space: normal;
+      }
+
+      .ant-card-meta-title {
+        font-weight: bold;
+      }
     }
 
-    .ant-col{
-        padding:15px !important;
-  
-    
+    .ant-card-actions {
+      background-color: transparent;
+      border: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+
+      .ant-btn {
+        width: 90%;
+        height: 35px;
+        background-color: transparent;
+        color: $font-light;
+        border: 1px solid $primary-color;
+      }
     }
+  }
 
-    .row-courses{
+  &__more {
+    text-align: center;
 
-        .ant-col{
-            padding:15px !important;
-        }
+    .ant-btn {
+      background-color: $primary-color;
+      border: 0;
+      color: $font-light;
+      width: 200px;
+      height: 40px;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $primary-color-hover;
+        color: $font-light;
+      }
     }
-
-    &__card{
-        border:0px;
-        height:100%;
-        background-color:$background-dark-light-web;
-        border-radius:10px;
-        overflow:hidden;
-        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-        -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
-
-        .ant-card-body{
-            text-align:center;
-            min-height:130px;
-    
-            .ant-card-meta-title,.ant-card-meta-description{
-                color:$font-light;
-                white-space:normal;
-            }
-    
-            .ant-card-meta-title{
-                font-weight:bold;
-            }
-    
-        }
-
-        .ant-card-actions{
-            background-color:transparent;
-            border:0;
-
-           .ant-btn{
-                width:90%;
-                height:35px;
-                background-color:transparent;
-                color:$font-light;
-                border:1px solid $primary-color;
-                
-    
-           }
-        }
-    }
-
-    &__more{
-        text-align:center;
-
-        .ant-btn{
-            background-color:$primary-color;
-            border:0;
-            color:$font-light;
-            width:200px;
-            height: 40px;
-            font-weight:bold;
-            font-size:14px;
-            text-transform:uppercase;
-
-            &:hover{
-                background-color:$primary-color-hover;
-                color:$font-light;
-            }
-        }
-    }
-    
+  }
 }

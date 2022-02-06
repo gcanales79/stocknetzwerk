@@ -48,6 +48,7 @@ export default function HomeCourses() {
                 image={`https://netzwerk.mx${item.image}`}
                 title={item.title}
                 subtitle={item.Metatag.description}
+                link={`/blog/${item.url}`}
                 />
               </Col>
             )
