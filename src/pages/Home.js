@@ -2,8 +2,8 @@ import React from 'react';
 import {Helmet} from "react-helmet"
 import MainBanner from "../components/Web/MainBanner"
 import HomeCourses from "../components/Web/HomeCourses"
-import HowMyCoursesWork from "../components/Web/HowMyCoursesWork";
-import ReviewCourses from "../components/Web/ReviewCourses"
+// import HowMyCoursesWork from "../components/Web/HowMyCoursesWork";
+// import ReviewCourses from "../components/Web/ReviewCourses"
 
 
 export default function Home(){
@@ -15,9 +15,10 @@ export default function Home(){
             <meta name="description" content="Home | Liderazgo" data-react-helmet="true"/>
         </Helmet>
             <MainBanner/>
+            {/* Aqui va los Blogs que se enseñan al princio */}
             <HomeCourses/>
-            <HowMyCoursesWork/>
-            <ReviewCourses/>
+            {/* <HowMyCoursesWork/>
+            <ReviewCourses/> */}
         </>
     )
 }

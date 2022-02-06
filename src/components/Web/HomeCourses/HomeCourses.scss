@@ -30,6 +30,7 @@
 
     &__card{
         border:0px;
+        height:100%;
         background-color:$background-dark-light-web;
         border-radius:10px;
         overflow:hidden;
@@ -43,6 +44,7 @@
     
             .ant-card-meta-title,.ant-card-meta-description{
                 color:$font-light;
+                white-space:normal;
             }
     
             .ant-card-meta-title{

@@ -1,65 +1,63 @@
-import React from "react";
-import { Row, Col, Card, Button } from "antd";
+import React,{useState,useEffect} from "react";
+import { Row, Col, Card, Button,notification,Spin } from "antd";
 import { Link } from "react-router-dom";
-import reactJsHooks from "../../../assets/img/react-js-hooks.jpg";
-import reactNative from "../../../assets/img/react-native.jpg";
-import javaScript from "../../../assets/img/javascript-es6.jpg";
-import wordPress from "../../../assets/img/wordpress.jpg";
-import prestaShop from "../../../assets/img/prestashop-1-7.jpg";
-import cssGrid from "../../../assets/img/css-grid.jpg";
+// import reactJsHooks from "../../../assets/img/react-js-hooks.jpg";
+// import reactNative from "../../../assets/img/react-native.jpg";
+// import javaScript from "../../../assets/img/javascript-es6.jpg";
+// import wordPress from "../../../assets/img/wordpress.jpg";
+// import prestaShop from "../../../assets/img/prestashop-1-7.jpg";
+// import cssGrid from "../../../assets/img/css-grid.jpg";
+import {getBlogsApi} from "../../../api/blog";
 
 import "./HomeCourses.scss";
 
 export default function HomeCourses() {
+  const [blogData, setBlogData] = useState(null);
+
+  //console.log(blogData);
+
+  useEffect(() => {
+    getBlogsApi(6,1).then(response=>{
+      // console.log(response.data)
+      setBlogData(response.data)
+    }).catch(()=>{
+      notification["error"]({
+        message:"Error del servidor"
+      })
+    })
+  }, []);
+  
+  if(!blogData){
+    return (
+      <Spin tip="Cargando" style={{ width: "100%", padding: "200px 0" }}></Spin>
+    );
+  }
+
   return (
     <Row className="home-courses">
       <Col lg={24} className="home-courses__title">
-        <h2>Aprende y mejora tus habilidades</h2>
+        <h2>Hablando de liderazgo y equipos</h2>
       </Col>
       <Col lg={4} />
       <Col lg={16}>
-          <Row classname="row-courses">
-              <Col md={6}><CardCourse 
-              image={reactJsHooks} 
-              title="React JS Hooks"
-              subtitle="Intermedio - React/Javascript"
-              link="https://netzwerk.mx/"/></Col>
-              <Col md={6}><CardCourse 
-              image={reactNative} 
-              title="React Native Expo"
-              subtitle="Intermedio - React/Javascript"
-              link="https://netzwerk.mx/"/></Col>
-              <Col md={6}><CardCourse 
-              image={javaScript} 
-              title="JavaScript ES6"
-              subtitle="Básico - Javascript"
-              link="https://netzwerk.mx/"/></Col>
-              <Col md={6}><CardCourse 
-              image={wordPress} 
-              title="WordPress"
-              subtitle="Básico - WordPress"
-              link="https://netzwerk.mx/"/></Col>
-              
-          </Row>
-          <Row className="row-courses">
-          <Col md={6}><CardCourse 
-              image={prestaShop} 
-              title="PrestaShop 1.7"
-              subtitle="Básico - PrestaShop"
-              link="https://netzwerk.mx/"/>
+        <Row classname="row-courses">
+          {blogData.map((item)=>{
+            return(
+              <Col key={item.id} md={12}>
+                <CardCourse
+                image={`https://netzwerk.mx${item.image}`}
+                title={item.title}
+                subtitle={item.Metatag.description}
+                />
               </Col>
-              <Col md={6}></Col>
-              <Col md={6}></Col>
-              <Col md={6}><CardCourse 
-              image={cssGrid} 
-              title="CSSGrid"
-              subtitle="Intermedio - CSSt"
-              link="https://netzwerk.mx/"/></Col>
-          </Row>
+            )
+          })}
+        </Row>
+          
       </Col>
       <Col lg={4} />
       <Col lg={24} className="home-courses__more">
-          <Link to="/courses"><Button>Ver Mas</Button></Link>
+          <Link to="/blog"><Button>Ver Mas</Button></Link>
       </Col>
     </Row>
   );

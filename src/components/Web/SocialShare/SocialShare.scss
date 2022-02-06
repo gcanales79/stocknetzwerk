@@ -1,0 +1,25 @@
+@import "../../../scss/index.scss";
+
+.social-share{
+    justify-content: space-around;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+
+
+    &__icon{
+        background-color: $background-dark-web;
+    }
+
+    &__button{
+        margin-right:10px;
+    }
+
+    .button{
+        background-color: $background-dark-web;
+    }
+    
+}
+

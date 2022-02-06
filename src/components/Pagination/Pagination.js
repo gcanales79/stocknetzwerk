@@ -9,6 +9,7 @@ export default function Pagination(props) {
     //console.log(location)
     //console.log(history)
     const currentPage=parseInt(post.page)
+    const pageSize=parseInt(post.limit)
 
     //console.log(location)
 
@@ -21,7 +22,7 @@ export default function Pagination(props) {
       <PaginationAntd
       defaultCurrent={currentPage}
       total={post.total}
-      pageSize={post.limit}
+      pageSize={pageSize}
       onChange={newPage=>onChangePage(newPage)}
       className="pagination"
       />
