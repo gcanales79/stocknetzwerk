@@ -222,7 +222,8 @@ function UsersInactive(props) {
 }
 
 function UserInactive(props) {
-  const { user, setUser, setReloadUsers } = props;
+  //Quite setUser
+  const { user, setReloadUsers } = props;
   const [avatar, setAvatar] = useState(null);
   useEffect(() => {
     if (user.avatar) {

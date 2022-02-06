@@ -64,7 +64,7 @@ function Course(props) {
 
   return <a href={urlCourse} target="_blank" rel="noopener noreferrer">
     <Card
-    cover={<img src={courseInfo. image_480x270} alt={courseInfo.title}/>}>
+    cover={<img src={courseInfo.image_480x270} alt={courseInfo.title}/>}>
       <Meta
       title={courseInfo.title}
       description={courseInfo.headline}/>

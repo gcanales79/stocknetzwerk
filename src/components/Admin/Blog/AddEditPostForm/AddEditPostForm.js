@@ -95,11 +95,11 @@ function AddEditForm(props) {
   const { postData, setPostData, post, processPost } = props;
   //console.log(postData);
   const editorRef = useRef(null);
-  const log = () => {
-    if (editorRef.current) {
-      console.log(editorRef.current.getContent());
-    }
-  };
+  // const log = () => {
+  //   if (editorRef.current) {
+  //     console.log(editorRef.current.getContent());
+  //   }
+  // };
   return (
     <Form
       className="add-edit-post-form"

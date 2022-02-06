@@ -12,9 +12,11 @@ export default function LayoutAdmin(props) {
   //console.log(props)
   const { routes } = props;
   const [menuCollapsed, setMenuCollapsed] = useState(false);
-  const [windowWidth,setWindowWidth] = useState(window.innerWidth)
+  // const [windowWidth,setWindowWidth] = useState(window.innerWidth)
   const { Header, Footer, Content } = Layout;
   const { user, isLoading } = useAuth();
+
+  const windowWidth=window.innerWidth;
 
   //console.log(user);
   //console.log(isLoading)
