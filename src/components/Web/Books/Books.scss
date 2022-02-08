@@ -1,0 +1,80 @@
+@import "../../../scss/index.scss";
+
+.libros-list-web {
+  margin: 50px 0;
+
+  h1 {
+    text-align: center;
+    color: $font-light;
+    margin: 50px 0;
+  }
+
+  .book {
+    color: $font-light;
+    display: flex;
+
+    &__date {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: $primary-color;
+      margin-right: 20px;
+      border-radius: 5px;
+      text-transform: capitalize;
+      padding: 5px 15px;
+    }
+
+    &__author {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 22px;
+    }
+
+    &__fecha {
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+
+    &__btn {
+      text-align: center;
+
+      .ant-btn {
+        color: $primary-color;
+      }
+    }
+
+    .ant-list-item-meta-title {
+      a {
+        color: $font-light;
+        font-size: 23px;
+        &:hover {
+          color: $primary-color-dark;
+        }
+      }
+    }
+
+    .ant-list-item-meta-description {
+      color: $primary-color;
+      font-size: 17px;
+    }
+  }
+
+  .img {
+    transition: transform 0.2s; /* Animation */
+  }
+
+  .img:hover {
+    transform: scale(
+      1.5
+    ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    -webkit-transform: scale(
+      1.5
+    ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  -moz-transform: scale(
+    1.5
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.ant-spin {
+}

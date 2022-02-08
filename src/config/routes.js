@@ -15,6 +15,7 @@ import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import Courses from "../pages/Courses";
 import Blog from "../pages/Blog";
+import Libros from "../pages/Libros";
 
 //Other
 import Error404 from "../pages/Error404"
@@ -92,6 +93,11 @@ const routes=[
             {
                 path:"/blog/:url",
                 component:Blog,
+                exact:true
+            },
+            {
+                path:"/libros",
+                component:Libros,
                 exact:true
             },
             {

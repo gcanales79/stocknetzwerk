@@ -9,8 +9,7 @@ export default function MyInfo() {
         <div className="my-info">
             <img src={LogoNetzwerk} alt="Logo Netzwerk"/>
             <h4>
-                Entra en el mundo del desarrollo web, disfruta creando proyectos de todo tipo, deja que tu
-                imaginación fluya y crea verdaderas maravillas!!!
+                Porque el aprendizaje es continuo. Como podemos ser mejores líderes y tener mejores equipos.
             </h4>
             <SocialLinks/>
         </div>

@@ -39,7 +39,7 @@ export default function PostListWeb(props) {
 
   if (!posts) {
     return (
-      <Spin tip="Cargando" style={{ width: "100%", padding: "200px 0" }}></Spin>
+      <Spin tip="Cargando" style={{ width: "100%", padding: "200px 200px" }}></Spin>
     );
   }
 
