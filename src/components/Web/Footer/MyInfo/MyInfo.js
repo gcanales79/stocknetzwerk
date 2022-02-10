@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoNetzwerk from "../../../../assets/img/Logo_netzwerk.png";
+import LogoNetzwerk from "../../../../assets/img/Logo_netzwerk-menu.jpg";
 import SocialLinks from "../../SocialLinks";
 
 import "./MyInfo.scss"

@@ -91,37 +91,37 @@ export default function PostInfo(props) {
         />
         {/*Og Tags*/ }
         <meta
-          name="og:type"
+          property="og:type"
           content="article"
           data-react-helmet="true"
         /> 
         <meta
-        name="og:url"
+        property="og:url"
         content={`http://104.248.125.58/blog/${postInfo.url}`}
         data-react-helmet="true"
       />
        <meta
-          name="og:title"
+          property="og:title"
           content={postInfo.Metatag.creator}
           data-react-helmet="true"
         />
         <meta
-          name="og:description"
-          content={postInfo.Metatag.description}
+          property="og:description"
+          property={postInfo.Metatag.description}
           data-react-helmet="true"
         />
         <meta
-          name="article:author"
+          property="article:author"
           content={postInfo.Metatag.creator}
           data-react-helmet="true"
         />
         <meta
-          name="article:published_date"
+          property="article:published_date"
           content={postInfo.Metatag.createdAt}
           data-react-helmet="true"
         />
         <meta
-          name="og:image"
+          property="og:image"
           content={postInfo.Metatag.image}
           data-react-helmet="true"
         />
