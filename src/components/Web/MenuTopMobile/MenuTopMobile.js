@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Popover,Menu } from "antd";
 import { Link } from "react-router-dom";
-import logoBlack from "../../../assets/img/Logo_netzwerk.png";
+import logoBlack from "../../../assets/img/Logo_netzwerk-menu.jpg";
 import { getMenuApi } from "../../../api/menu";
 import SocialLinks from "../SocialLinks";
 import {
