@@ -9,7 +9,7 @@ import "./SocialShare.scss";
 
 export default function SocialShare(props) {
     const {url}=props;
-    console.log(url)
+    // console.log(url)
   return <div className="social-share">
       <FacebookShareButton className="social-share__button" url={`http://104.248.125.58/blog/${url}`} >
       <FacebookIcon className="social-share"size={32} round={true} />

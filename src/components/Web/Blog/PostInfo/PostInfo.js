@@ -13,7 +13,7 @@ export default function PostInfo(props) {
   // console.log(url)
   const [postInfo, setPostInfo] = useState(null);
 
-  //console.log(postInfo);
+  console.log(postInfo);
   useEffect(() => {
     getBlogApi(url)
       .then((response) => {
@@ -41,7 +41,90 @@ export default function PostInfo(props) {
   return (
     <>
       <Helmet>
-        <title>{postInfo.title} | Netzwerk</title>
+      <title>{postInfo.title} | Netzwerk</title>
+        <meta
+          name="description"
+          content={postInfo.Metatag.description}
+          data-react-helmet="true"
+        />
+        <meta
+          name="keywords"
+          content={postInfo.Metatag.keywords}
+          data-react-helmet="true"
+        />
+         <meta
+          name="robots"
+          content="index,follow"
+          data-react-helmet="true"
+        />
+        
+        {/*Twitter Tags*/}
+         <meta
+          name="twitter:card"
+          content={postInfo.Metatag.cardType}
+          data-react-helmet="true"
+        />
+        <meta
+          name="twitter:title"
+          content={postInfo.Metatag.twitterTitle}
+          data-react-helmet="true"
+        />
+        <meta
+          name="twitter:description"
+          content={postInfo.Metatag.twitterDescription}
+          data-react-helmet="true"
+        />
+        <meta
+          name="twitter:site"
+          content={postInfo.Metatag.creator}
+          data-react-helmet="true"
+        />
+         <meta
+          name="twitter:creator"
+          content={postInfo.Metatag.creator}
+          data-react-helmet="true"
+        />
+        <meta
+          name="twitter:image"
+          content={postInfo.Metatag.image}
+          data-react-helmet="true"
+        />
+        {/*Og Tags*/ }
+        <meta
+          name="og:type"
+          content="article"
+          data-react-helmet="true"
+        /> 
+        <meta
+        name="og:url"
+        content={`http://104.248.125.58/blog/${postInfo.url}`}
+        data-react-helmet="true"
+      />
+       <meta
+          name="og:title"
+          content={postInfo.Metatag.creator}
+          data-react-helmet="true"
+        />
+        <meta
+          name="og:description"
+          content={postInfo.Metatag.description}
+          data-react-helmet="true"
+        />
+        <meta
+          name="article:author"
+          content={postInfo.Metatag.creator}
+          data-react-helmet="true"
+        />
+        <meta
+          name="article:published_date"
+          content={postInfo.Metatag.createdAt}
+          data-react-helmet="true"
+        />
+        <meta
+          name="og:image"
+          content={postInfo.Metatag.image}
+          data-react-helmet="true"
+        />
       </Helmet>
       <div className="post-info">
         <h1 className="post-info__title">{postInfo.title}</h1>
