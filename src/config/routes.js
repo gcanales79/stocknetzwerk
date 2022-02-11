@@ -8,7 +8,8 @@ import AdminSignIn from "../pages/Admin/SignIn/SignIn";
 import AdminUsers from "../pages/Admin/Users";
 import AdminMenuWeb from "../pages/Admin/MenuWeb";
 import AdminCourses from "../pages/Admin/Courses"
-import AdminBlog from "../pages/Admin/Blog"
+import AdminBlog from "../pages/Admin/Blog";
+import AdminTweet from "../pages/Admin/Tweet";
 
 //Pages
 import Home from "../pages/Home";
@@ -56,6 +57,11 @@ const routes=[
             {
                 path:"/admin/blog",
                 component:AdminBlog,
+                exact:true
+            },
+            {
+                path:"/admin/tweet",
+                component:AdminTweet,
                 exact:true
             },
             {

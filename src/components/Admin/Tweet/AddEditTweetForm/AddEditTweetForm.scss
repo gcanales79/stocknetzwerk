@@ -1,0 +1,24 @@
+@import "../../../../scss/index.scss";
+
+.add-edit-tweet-form{
+    text-align: center;
+    
+    .ant-form{
+        margin-top:5px;
+        margin-bottom:5px;
+        
+        .anticon{
+            color:rgba(0,0,0,0.25);
+        }
+    }
+
+    .ant-row{
+        margin-bottom:10px;
+    }
+
+
+    .btn-submit{
+        width:100%
+    }
+
+}
