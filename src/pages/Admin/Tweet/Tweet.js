@@ -22,7 +22,8 @@ function Tweet(props) {
   //   console.log(tweets)
 
   useEffect(() => {
-    getTweetsApi(5, page)
+    //El numero dice cuantos sale por pagina
+    getTweetsApi(12, page)
       .then((response) => {
         if (response?.code !== "200") {
           notification["warning"]({

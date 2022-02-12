@@ -134,6 +134,7 @@ function AddEditForm(props) {
           <Col span={24}>
           <TextArea
             prefix={<TwitterOutlined />}
+            spellcheck="true"
             placeholder="Tweet"
             autosize
             value={tweetData.comment}

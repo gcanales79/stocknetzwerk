@@ -1,5 +1,5 @@
 import React from "react";
-import NetzwerkLogo from "../../../assets/img/Logo_netzwerk.png"
+import NetzwerkLogo from "../../../assets/img/Logo_netzwerk-menu.jpg"
 import {Button} from "antd";
 import {MenuFoldOutlined,MenuUnfoldOutlined,PoweroffOutlined} from "@ant-design/icons";
 import {logout} from "../../../api/auth"
