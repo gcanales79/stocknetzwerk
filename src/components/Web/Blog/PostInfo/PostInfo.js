@@ -107,7 +107,7 @@ export default function PostInfo(props) {
         />
         <meta
           property="og:description"
-          property={postInfo.Metatag.description}
+          content={postInfo.Metatag.description}
           data-react-helmet="true"
         />
         <meta

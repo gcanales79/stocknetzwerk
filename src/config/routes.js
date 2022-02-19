@@ -10,6 +10,7 @@ import AdminMenuWeb from "../pages/Admin/MenuWeb";
 import AdminCourses from "../pages/Admin/Courses"
 import AdminBlog from "../pages/Admin/Blog";
 import AdminTweet from "../pages/Admin/Tweet";
+import AdminTracking from "../pages/Admin/Tracking";
 
 //Pages
 import Home from "../pages/Home";
@@ -62,6 +63,11 @@ const routes=[
             {
                 path:"/admin/tweet",
                 component:AdminTweet,
+                exact:true
+            },
+            {
+                path:"/admin/tracking",
+                component:AdminTracking,
                 exact:true
             },
             {

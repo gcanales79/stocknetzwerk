@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import Pagination from "../../Pagination";
 import queryString from "query-string";
 import { Spin, List, notification,Button } from "antd";
-import { Link } from "react-router-dom";
 import { getBooksApi } from "../../../api/libros";
 
 import "./Books.scss";
