@@ -45,11 +45,11 @@ export default function TrackingList(props) {
   };
 
   const columns = [
-    { title: "Descripción", dataIndex: "description", key: "description" },
+    { title: "Descripción", dataIndex: "description", responsive:["md"], key: "description" },
     { title: "Tracking", dataIndex: "tracking", key: "tracking" },
     { title: "Courier", dataIndex: "carrier", key: "carrier", responsive:["md"] },
     {title:"Status",dataIndex:"status", key: "status" },
-    {title:"ETA",dataIndex:"eta", key: "eta", render:text=>(moment({text}).format("DD-MMM-YYYY"))},
+    {title:"ETA",dataIndex:"eta", responsive:["md"], key: "eta", render:text=>(moment({text}).format("DD-MMM-YYYY"))},
     {title:"Accion",key:"action", render:(text,record)=>(
         <Space size="middle">
             <Button type="primary" onClick={()=>editTracking(record)}><EditOutlined/></Button>
@@ -60,7 +60,7 @@ export default function TrackingList(props) {
 
   return (
     <div>
-      <Table columns={columns} dataSource={trackings.docs} rowKey="_id" pagination={false} scroll={{ x: 900 }}/>
+      <Table columns={columns} dataSource={trackings.docs} rowKey="_id" pagination={false} scroll={{ x: 390 }}/>
     </div>
   );
 }

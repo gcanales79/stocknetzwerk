@@ -161,5 +161,5 @@ export default function PostInfo(props) {
       </div>
       ;
     </>
-  );
+  )
 }

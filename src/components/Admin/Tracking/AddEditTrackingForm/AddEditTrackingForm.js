@@ -139,11 +139,17 @@ function AddEditForm(props) {
           />
         </Col>
         <Col span={12}>
-          <Select placeholder="Selecciona un courier..."
+          <Select 
+          showSearch
+          placeholder="Selecciona un courier..."
+          optionFilterProp="children"
           onChange={(e) =>
             setTrackingData({ ...trackingData, carrier: e })
           }
           value={trackingData.carrier}
+          filterOption={(input, option) =>
+            option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+          }
           >
             <Option value="DHLExpress">DHL</Option>
             <Option value="Fedex">Fedex</Option>
