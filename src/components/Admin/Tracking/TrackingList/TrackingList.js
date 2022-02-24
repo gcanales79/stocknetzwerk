@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Button, Modal, notification, Table,Space } from "antd";
+import {Button, Modal, notification, Table,Space } from "antd";
 import {
   EditOutlined,
   DeleteOutlined

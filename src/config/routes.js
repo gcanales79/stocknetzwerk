@@ -11,6 +11,7 @@ import AdminCourses from "../pages/Admin/Courses"
 import AdminBlog from "../pages/Admin/Blog";
 import AdminTweet from "../pages/Admin/Tweet";
 import AdminTracking from "../pages/Admin/Tracking";
+import AdminCall from "../pages/Admin/Call";
 
 //Pages
 import Home from "../pages/Home";
@@ -68,6 +69,11 @@ const routes=[
             {
                 path:"/admin/tracking",
                 component:AdminTracking,
+                exact:true
+            },
+            {
+                path:"/admin/calls",
+                component:AdminCall,
                 exact:true
             },
             {
