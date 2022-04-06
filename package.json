@@ -43,10 +43,6 @@
       "react-app/jest"
     ]
   },
-    "reactSnap": {
-      "inlineCss": true,
-      "fixWebpackChunksIssue": false
-    },
   "browserslist": {
     "production": [
       ">0.2%",
