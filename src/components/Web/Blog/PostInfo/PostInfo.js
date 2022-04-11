@@ -159,7 +159,6 @@ export default function PostInfo(props) {
           <Col md={2} xs={1}/>
         </Row>
       </div>
-      ;
     </>
   )
 }
