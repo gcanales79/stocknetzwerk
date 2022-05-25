@@ -6,7 +6,7 @@ import {
 } from "@ant-design/icons";
 import { getAccessTokenApi } from "../../../../api/auth";
 import { deleteTrackingApi } from "../../../../api/track";
-import moment from "moment";
+import moment from "moment-timezone";
 
 import "./TrackingList.scss";
 
