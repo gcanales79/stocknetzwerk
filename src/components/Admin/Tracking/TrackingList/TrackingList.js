@@ -49,7 +49,7 @@ export default function TrackingList(props) {
     { title: "Tracking", dataIndex: "tracking", key: "tracking" },
     { title: "Courier", dataIndex: "carrier", key: "carrier", responsive:["md"] },
     {title:"Status",dataIndex:"status", key: "status" },
-    {title:"ETA",dataIndex:"eta", responsive:["md"], key: "eta", render:text=>(moment.utc({text}))},
+    {title:"ETA",dataIndex:"eta", responsive:["md"], key: "eta", render:text=>(moment.utc({text}).format())},
     {title:"Accion",key:"action", render:(text,record)=>(
         <Space size="middle">
             <Button type="primary" onClick={()=>editTracking(record)}><EditOutlined/></Button>
