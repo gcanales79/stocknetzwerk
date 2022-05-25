@@ -15,7 +15,7 @@ const { confirm } = Modal;
 export default function TrackingList(props) {
   const { trackings, setReloadTracking, editTracking } = props;
 
-//   console.log(trackings)
+  console.log(trackings)
 
   const deleteTracking = (tracking) => {
     const accessToken = getAccessTokenApi();
