@@ -50,7 +50,7 @@ export default function TrackingList(props) {
     { title: "Courier", dataIndex: "carrier", key: "carrier", responsive:["md"] },
     {title:"Status",dataIndex:"status", key: "status" },
     {title:"ETA", responsive:["md"], key: "eta", render:(_,record)=>(
-      <p>{moment(record.eta).format("DD-MMM-YYYY")}</p>
+      <>{moment(record.eta).format("DD-MMM-YYYY")}</>
     )},
     {title:"Accion",key:"action", render:(text,record)=>(
         <Space size="middle">
