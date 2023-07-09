@@ -12,6 +12,7 @@ import AdminBlog from "../pages/Admin/Blog";
 import AdminTweet from "../pages/Admin/Tweet";
 import AdminTracking from "../pages/Admin/Tracking";
 import AdminCall from "../pages/Admin/Call";
+import AdminBirthday from "../pages/Admin/Birthday";
 
 //Pages
 import Home from "../pages/Home";
@@ -74,6 +75,11 @@ const routes=[
             {
                 path:"/admin/calls",
                 component:AdminCall,
+                exact:true
+            },
+            {
+                path:"/admin/birthday",
+                component:AdminBirthday,
                 exact:true
             },
             {
