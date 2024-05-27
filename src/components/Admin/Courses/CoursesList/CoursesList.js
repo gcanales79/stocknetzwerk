@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { List, Button, Modal as ModalAntd, notification } from "antd";
 import { EditOutlined,DeleteOutlined} from "@ant-design/icons";
-import DragSortableList from "react-drag-sortable";
+//import DragSortableList from "react-drag-sortable";
 import Modal from "../../../Modal";
 import AddEditCourseForm from "../AddEditCourseForm"
 import { getDataUdemyApi, deleteCourseApi, updateCourseApi} from "../../../../api/courses";
@@ -97,7 +97,7 @@ export default function CoursesList(props) {
             No tienes cursos creados
           </h2>
         )}
-        <DragSortableList items={listCourses} onSort={onSort} type="vertical"/>
+        {/*<DragSortableList items={listCourses} onSort={onSort} type="vertical"/>*/}
       </div>
       <Modal
       title={modalTitle}
